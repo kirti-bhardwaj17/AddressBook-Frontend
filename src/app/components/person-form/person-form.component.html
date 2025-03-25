@@ -1,0 +1,31 @@
+<div class="form-container">
+  <button class="back-btn" (click)="goToList()">⬅ Back to Address Book</button>
+  <h2>Add New Person</h2>
+
+  <form (ngSubmit)="addPerson()">
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" [(ngModel)]="person.name" name="name" required />
+    </div>
+
+    <div class="input-group">
+      <label>City</label>
+      <input type="text" [(ngModel)]="person.city" name="city" required />
+    </div>
+
+    <div class="input-group">
+      <label>Phone</label>
+      <input type="text" [(ngModel)]="person.phone" name="phone" required />
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="person.email" name="email" required />
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="add">Submit</button>
+      <button type="button" class="reset" (click)="goToList()">Cancel</button>
+    </div>
+  </form>
+</div>
